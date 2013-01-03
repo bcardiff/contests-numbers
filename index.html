@@ -1,0 +1,33 @@
+<!DOCTYPE>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="stylesheets/application.css" />
+		<script src="javascripts/jquery-1.8.3.min.js" type="text/javascript"></script>
+		<script src="javascripts/knockout-2.2.0.js" type="text/javascript"></script>
+		<script src="javascripts/application.js" type="text/javascript"></script>
+	</head>
+	<body>
+		<div id="configuration">
+			<h1>Concursantes:</h1>
+			<span id="status"></span><a class="print" href="#">imprimir</a><br>
+			<div class="textarea-wrapper">
+				<textarea id="inputcsv"></textarea>
+			</div>
+		</div>
+
+		<div id="output-wrapper">
+			<div id="output" data-bind="foreach: page">
+				<div class="page" data-bind="foreach: person">
+					<div class="person">
+						<img src="logo.png">
+						<div class="number" data-bind="text: number"></div>
+						<div class="name" data-bind="text: name"></div>
+					</div>
+				</div>
+			</div>
+
+			<div class="clear"></div>
+		</div>
+
+	</body>
+</html>
