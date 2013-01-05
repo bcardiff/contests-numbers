@@ -55,7 +55,7 @@ div {
 	.person { box-shadow:         2px 2px 9px rgba(50, 50, 50, 0.75); }
 	.person { height: 135px; width: 210px; border: 1px solid #ccc;}
 	.person .number { font-size: 90px; line-height: 110px; }
-	.person .name { font-size: 23px; line-height: 30px; white-space:nowrap; overflow:hidden; }
+	.person .name { font-size: 11px; line-height: 30px; white-space:nowrap; overflow:hidden; }
 	.person { position: relative; }
 	.person img { position: absolute; top: 5px; left: 5px; width: 50px }
 	.person .number { text-align: center; vertical-align: middle; position: absolute; height: 100%; width: 100%; top: 0; left: 0; }
@@ -71,16 +71,14 @@ div {
 
 	.person { height: 13.5cm; }
 	.person .number { font-size: 9cm; line-height: 11cm; }
-	.person .name { font-size: 2.3cm; line-height: 3cm; white-space:nowrap; overflow:hidden; }
+	.person .name { font-size: 1.1cm; line-height: 3cm; white-space:nowrap; overflow:hidden; }
 
 	@page { margin: 0cm; }
 	.page:not(:last-child) { page-break-after: always; }
-	/*.person { border-bottom: 1px solid #666; }*/
-	/*.page .person:first-child { border-top: 1px solid #666; }*/
 	.page .person:first-child { border-bottom: 1px solid #999; }
 
 	.person { position: relative; }
-	.person img { position: absolute; top: 0.5cm; left: 0.5cm; }
+	.person img { position: absolute; top: 0.5cm; left: 0.5cm; width: 5cm; }
 	.person .number { text-align: center; vertical-align: middle; position: absolute; height: 100%; width: 100%; top: 0; left: 0; }
 	.person .name { text-align: center; position: absolute; width: 100%; bottom: 0.7cm; left: 0; }
 
