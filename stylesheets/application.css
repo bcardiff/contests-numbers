@@ -5,7 +5,7 @@
   src: local('Paytone One'), local('PaytoneOne'), url(paytone-one.woff) format('woff');
 }
 
-div { 
+div {
 	font-family: 'Paytone One', sans-serif;
   text-rendering: optimizelegibility;
 }
@@ -65,16 +65,16 @@ div {
 	.clear { clear: both; height: 10px; }
 }
 
-@media print 
+@media print
 {
 	#configuration { display: none; }
 
-	.person { height: 13.5cm; }
-	.person .number { font-size: 9cm; line-height: 11cm; }
+	.person { height: 13cm; }
+	.person .number { font-size: 9cm; line-height: 10.5cm; }
 	.person .name { font-size: 1.1cm; line-height: 3cm; white-space:nowrap; overflow:hidden; }
 
-	@page { margin: 0cm; }
-	.page:not(:last-child) { page-break-after: always; }
+	.page { margin: 0cm; }
+	.page { page-break-after: always; }
 	.page .person:first-child { border-bottom: 1px solid #999; }
 
 	.person { position: relative; }
