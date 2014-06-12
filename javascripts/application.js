@@ -21,7 +21,7 @@ $(function(){
             if (i % 2 == 0) {
                 model.page.push({ person : ko.observableArray() });
             }
-            
+
             var pages = ko.utils.unwrapObservable(model.page)
             pages[pages.length - 1].person.push({
                 number: e[0],
@@ -44,7 +44,7 @@ $(function(){
     });
     inputcsv.keyup(parseData);
 
-    inputcsv.val("1\tJose Pelufo\r\n2\tSandra Lin\r\n3\tJimmy Doe\r\n");
+    inputcsv.val("1\tJose Pelufo\r\n2\tSandra Lin\r\n3\tJimmy Doe\r\n4\tDude\r\n5\tCarl Finn\r\n6\tLaura Tren\r\n");
     parseData();
 });
 
