@@ -3,6 +3,7 @@
 	<head>
 		<link rel="stylesheet" type="text/css" href="stylesheets/application.css" />
 		<script src="javascripts/jquery-1.8.3.min.js" type="text/javascript"></script>
+		<script src="javascripts/jqColorPicker.min.js" type="text/javascript"></script>
 		<script src="javascripts/knockout-2.2.0.js" type="text/javascript"></script>
 		<script src="javascripts/application.js" type="text/javascript"></script>
 	</head>
@@ -13,13 +14,20 @@
 			<div class="textarea-wrapper">
 				<textarea id="inputcsv"></textarea>
 			</div>
+			<div class="bottom">
+				<label for="image">Logo</label>&nbsp;&nbsp;<input type="file" id="image" />
+				<br/>
+				<label for="color">Color</label>&nbsp;&nbsp;<input type="text" id="color"/>
+				<br/>
+				<a href="logo.png">sample logo</a>
+			</div>
 		</div>
 
-		<div id="output-wrapper">
+		<div id="output-wrapper" data-bind="style: { color: color }">
 			<div id="output" data-bind="foreach: page">
 				<div class="page" data-bind="foreach: person">
 					<div class="person">
-						<img src="logo.png">
+						<img data-bind="attr: { src: $root.logo}">
 						<div class="number" data-bind="text: number"></div>
 						<div class="name" data-bind="text: name"></div>
 					</div>

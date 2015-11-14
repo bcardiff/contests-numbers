@@ -7,7 +7,9 @@ $(function(){
     var inputcsv = $("#inputcsv");
 
     var model = {
-        page : ko.observableArray()
+        page : ko.observableArray(),
+        logo: ko.observable("logo.png"),
+        color: ko.observable('#000000'),
     };
 
     ko.applyBindings(model);
@@ -29,6 +31,26 @@ $(function(){
             });
         });
     };
+
+    $("input[type=file]").change(function(){
+      var file = this.files[0];
+      var reader = new FileReader();
+      reader.onloadend = function () {
+        model.logo(reader.result);
+      }
+      if (file) {
+        reader.readAsDataURL(file);
+      }
+    });
+
+    $('#color')
+      .colorPicker({
+        renderCallback: function($elm, toggled) {
+          if (toggled === false) {
+            model.color($elm.css("background-color"));
+          }
+        }
+      });
 
     inputcsv.change(parseData);
     inputcsv.keydown(function(e) {

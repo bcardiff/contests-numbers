@@ -29,9 +29,17 @@ div {
 		left: 0;
 		right: 0;
 		top: 120;
-		bottom: 0;
+		bottom: 70px;
 		padding: 10px;
 	}
+
+  #configuration .bottom {
+    position: absolute;
+		left: 0;
+		right: 0;
+    bottom: 0;
+    padding: 10px;
+  }
 
 	#configuration .print {
 		float: right;
